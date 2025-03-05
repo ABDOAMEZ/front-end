@@ -59,7 +59,7 @@ const HeaderCenter = () => {
   };
 
   const showMenuDrop = () => {
-    let dropMenu = document.querySelector("#drop-menu");
+    let dropMenu = document.querySelector("#drop-menu"); 
     let dropContainer = dropMenu.parentElement;
 
     dropContainer.classList.add("show");
