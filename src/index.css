@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --blue-1 : #009ee0;
+  --blue-2 : #87CEEB;
+  --yellow-1 : #FFD93D;
+  --Coral-1 : #FF6B6B;
+  --Charcoal_Grey-1 : #2C3E50; 
+  --light_grey-1: #ECF0F1;
+  --midel-light_grey : #cad8de ;
+  --font-1 : #000000;
+  --font-2 : #322f2f;
+  --white-1: #FFFFFF;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: var(--font-1);
+  user-select: var(--blue-1);
+}
+
+a{
+  text-decoration: none;
+  column-rule: black;
+  color: black;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  
+  li{
+    list-style: none;
+  }
+}
+
+.icon{
+  font-size: 20px;
+}

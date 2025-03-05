@@ -1,0 +1,279 @@
+:root {
+    --blue-1: #009ee0;
+    --blue-2: #87ceeb;
+    --yellow-1: #f5d224;
+    --yellow-2: #ffd93d;
+    --Coral-1: #ff6b6b;
+    --Charcoal_Grey-1: #2c3e50;
+    --light_grey-1: #ecf0f1;
+    --midel-light_grey: #cad8de;
+    --font-1: #000000;
+    --font-2: #322f2f;
+    --white-1: #ffffff;
+    --white-2: #ffffffd5;
+  }
+
+
+.SinfinUp{
+    position: relative;
+    
+}
+
+.SinfinUp .SinfinUpConatiner{
+    position: absolute;
+    width: 200px;
+    margin-top: 10px;
+    left: -380%;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 3px 10px #0000007d;
+    background: #FFFFFF;
+    z-index: 9999;
+    display: none;
+}
+
+.header-right .account:hover .SinfinUp .SinfinUpConatiner{
+    display: block;
+}
+
+.SinfinUp .SinfinUpConatiner::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--blue-1);
+    
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 50%, 0 50%, 0% 50%);
+    
+}
+
+.SinfinUp .SinginUpBtns{
+    width: 100%;
+    padding: 10px 10px 15px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #EEE;
+}
+
+.SinginUpBtns a{
+    width: fit-content;
+    padding: 8px 20px;
+    background: var(--blue-1);
+    border-radius: 20px;
+    color: #FFFFFF;
+    transition: .5s ease;
+}
+
+.SinginUpBtns a:hover{
+    background: navy;
+    scale: 1.03;
+}
+
+
+
+.SinfinUp #span{
+    width: fit-content;
+    font-size: 13px;
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 0;
+    padding: 5px 10px;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+}
+
+
+.quickEnter{
+    width: 100%;
+    height: fit-content;
+    padding: 15px 10px 10px 10px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quickEnter a{
+    width: fit-content;
+    height: fit-content;
+    background: #EEE;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#para{
+    display: block;
+    padding: 10px;
+    color: #7f888c;;
+    border-bottom: 1.5px solid var(--Charcoal_Grey-1);
+    font-size: 10.5px;
+}
+
+#para a{
+    text-decoration: underline;
+    font-size: 10.5px;
+}
+
+.quickEnter img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.actions #ul span{
+    position: relative;
+    background: transparent;
+    border-radius: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+}
+
+.actions #ul .icon{
+    font-size: 15px;
+    font-weight: 900;
+    color: #000000;
+}
+
+
+.actions #ul{
+    padding: 10px;
+    background: #FFFFFF;
+    
+}
+
+
+.actions #ul p{
+    display: block;
+    margin-left: 10px;
+}
+.actions #ul>li{
+    padding: 5px;
+}
+.actions #ul>li:hover{
+    background: #EEE;
+}
+
+.actions #ul>li:hover a{
+    font-weight: 600;
+    
+}
+
+.actions #ul>li a{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    padding: 5px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .SinfinUp .SinfinUpConatiner{
+        left: -426%;
+        width: 250px;
+    }
+
+    .SinfinUp .SinginUpBtns{
+        padding: 10px 25px 15px 25px;
+    }
+
+    
+    .SinginUpBtns a{
+        font-size: 15px;
+    }
+
+    #para{
+        display: block;
+        padding: 10px;
+        color: #7f888c;;
+        border-bottom: 1.5px solid var(--Charcoal_Grey-1);
+        font-size: 12px;
+    }
+    
+    #para a{
+        text-decoration: underline;
+        font-size: 12px;
+    }
+
+    .actions #ul .icon{
+        font-size: 15px;
+    }
+    
+    .actions #ul>li a{
+        flex-direction: row;
+        justify-content: start;
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .SinfinUp .SinfinUpConatiner{
+        left: -365%;
+    }
+
+    .actions #ul a,
+    .actions #ul .icon{
+        font-size: 15px;
+    }
+
+    #para{
+        display: block;
+        padding: 10px;
+        color: #7f888c;;
+        border-bottom: 1.5px solid var(--Charcoal_Grey-1);
+        font-size: 13px;
+    }
+    
+    #para a{
+        text-decoration: underline;
+        font-size: 13px;
+    }
+
+    .actions #ul .icon{
+        font-size: 16px;
+    }
+    
+    .actions #ul>li a{
+        flex-direction: row;
+        justify-content: start;
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .SinfinUp .SinfinUpConatiner{
+        left: -215%; 
+    }
+
+    #para a{
+        font-size: 13px;
+        display: inline;
+    }
+
+
+    
+    .actions #ul .icon{
+        font-size: 19px;
+    }
+    
+    .actions #ul p{
+        font-size: 16px;
+    }
+
+    
+    .actions #ul>li:hover p{
+        font-weight: 700;
+    }
+
+
+  
+    
+}

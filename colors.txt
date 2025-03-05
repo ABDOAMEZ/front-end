@@ -1,0 +1,73 @@
+Sky blue is a versatile color that pairs well with many other colors for UI/UX design. Here are some of the best color combinations for web design:  
+
+### 🔹 **Elegant & Professional**  
+✔ **Sky Blue (#87CEEB)** + **Navy Blue (#001F3F)** + **White (#FFFFFF)**   
+👉 *Best for: Corporate, finance, and tech websites.*  
+
+### 🔹 **Modern & Minimalist**  
+✔ **Sky Blue (#87CEEB)** + **Charcoal Grey (#2C3E50)** + **Light Grey (#ECF0F1)**   
+👉 *Best for: SaaS, dashboards, and portfolio websites.*  
+
+### 🔹 **Playful & Vibrant**  
+✔ **Sky Blue (#87CEEB)** + **Coral (#FF6B6B)** + **Yellow (#FFD93D)**  
+👉 *Best for: E-commerce, kids' websites, and creative startups.*  
+
+### 🔹 **Luxury & High-End**  
+✔ **Sky Blue (#87CEEB)** + **Gold (#FFD700)** + **Black (#222222)**  
+👉 *Best for: Luxury brands, fashion, and premium services.*  
+
+### 🔹 **Nature & Wellness**  
+✔ **Sky Blue (#87CEEB)** + **Emerald Green (#2ECC71)** + **Beige (#F5F5DC)**  
+👉 *Best for: Health, wellness, and organic brands.*  
+
+Would you like a color palette generator tool or some UI examples? 🚀
+
+
+{/* Category Menu */}
+              <ul className="category-menu">
+                {data.map((category) => (
+                  <li
+                    key={category.id}
+                    className="category-item"
+                    onClick={() => handleCategoryClick(category)}
+                  >
+                    {category.name}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Subcategories Menu */}
+              {activeCategory && (
+                <ul className="subcategory-menu">
+                  {activeCategory.subcategories.map((subcategory) => (
+                    <li
+                      key={subcategory.id}
+                      className="subcategory-item"
+                      onMouseEnter={() => handleSubcategoryClick(subcategory)}
+                    >
+                      <Link to={`/${subcategory.name}`}>
+                        {subcategory.name}
+                      </Link>
+
+                      <div className="prducts">
+                        {
+                          subcategory.products.map(p => (
+                            <Link to={p.name}>
+                              <img
+                          loading="lazy"
+                          src={p.image}
+                          alt={p.name}
+                          className="product-image"
+                        />
+                        <span>
+                          {p.name} - ${p.price}
+                        </span>
+                            </Link>
+
+                          ))
+                        }
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}

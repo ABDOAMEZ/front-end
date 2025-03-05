@@ -1,0 +1,193 @@
+:root {
+    --blue-1: #009ee0;
+    --blue-2: #87ceeb;
+    --yellow-1: #f5d224;
+    --yellow-2: #ffd93d;
+    --Coral-1: #ff6b6b;
+    --Charcoal_Grey-1: #2c3e50;
+    --light_grey-1: #ecf0f1;
+    --midel-light_grey: #cad8de;
+    --font-1: #000000;
+    --font-2: #322f2f;
+    --white-1: #ffffff;
+    --white-2: #ffffffd5;
+  }
+
+/* ✅ الحاوية العامة للأقسام */
+.app{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 15px;
+}
+.deals-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    background: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    
+  }
+
+
+  
+  /* ✅ الحاوية الخاصة بكل قسم */
+  .deals-container {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  
+  /* ✅ العنوان */
+  .deals-title {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* ✅ الأيقونة بجانب العنوان */
+  .app .icon {
+    background: var(--blue-1);
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+
+  .app >h1{
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  /* ✅ تحديد عرض كل قسم حسب الشاشة */
+  .deals-section {
+    flex: 1 1 32%;
+    max-width: 32%;
+  }
+  
+  /* ✅ عند التابلت يكون كل سطر به قسمين */
+  @media (max-width: 991px) {
+    /* .deals-section {
+      flex: 1 1 48%;
+      max-width: 48%;
+    } */
+  }
+  
+  /* ✅ عند الهواتف يكون كل قسم يأخذ سطر لوحده */
+  @media (max-width: 767px) {
+    /* .deals-section {
+      flex: 1 1 100%;
+      max-width: 100%;
+    } */
+
+    .deals-section {
+        flex: 1 1 48%;
+        max-width: 48%;
+      } 
+
+      .app >h1{
+        font-size: 25px;
+      }
+
+      .deals-title {
+        font-size: 20px;
+      }
+  }
+
+
+
+  @media (max-width: 450px) {
+    .deals-section {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .swiper-button-prev:after, .swiper-button-next:after{
+      font-size: 15px;
+    }
+
+    
+  }
+  
+  /* ✅ تنسيق المنتجات داخل السلايدر */
+  .deal-card {
+    background: white;
+    /* padding: 15px; */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: .5s ease;
+  }
+
+  .deal-card:hover{
+    transform: scale(1.05);
+  }
+
+ 
+  
+  .deal-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .deal-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .deal-price {
+    font-size: 18px;
+    color: #e63946;
+    font-weight: bold;
+  }
+  
+  .deal-old-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .deal-discount {
+    color: green;
+    font-size: 14px;
+  }
+  
+  .swiper-button-prev, .swiper-button-next{
+    background: #0000007b;
+    
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+    
+  }
+
+  .swiper-button-prev{
+    margin-left: -10px;
+  }
+  .swiper-button-next{
+    margin-right: -10px;
+  }
+
+  
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover{
+    background: #ffffffd3;  
+  }
+  .swiper-button-prev:hover::after,
+  .swiper-button-next:hover::after{ 
+    color: #0000007b;
+  }
