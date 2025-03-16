@@ -1,20 +1,137 @@
-main{
-width: 100%;
-height: fit-content;
-padding: 10px;
-background: #FFFFFF;
-margin: 10px 0;
+.allexpress-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.main-container{
-  background-image:
-    linear-gradient( rgba(19, 19, 20, 0.10), rgba(0, 0, 0, 0.10)),
-    url('../assets/images/main-bg1.avif');
-  width: 90%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  aspect-ratio: 1/1;
-  margin: auto;
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.business-card, .price-card, .delivery-card, .stats-card, .buy-again-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Grid Layout */
+.pricing-section, .delivery-section, .stats-section, .buy-again-section {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.price-group {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.quantity-condition, .delivery-time, .stats-label, .popular-tag {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.stats-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2196f3;
+  margin: 10px 0;
+}
+
+.search-container {
+  margin-top: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .allexpress-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+  }
+
+  .business-section {
+    grid-column: 1 / -1;
+  }
+
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .allexpress-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .business-section {
+    grid-column: span 1;
+  }
+
+  .pricing-section {
+    grid-column: span 1;
+  }
+
+  .delivery-section {
+    grid-column: span 1;
+  }
+
+  .stats-section {
+    grid-column: 1 / -1;
+  }
+
+  .buy-again-section {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .current-price {
+    font-size: 1.2rem;
+  }
+
+  .stats-value {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
 }

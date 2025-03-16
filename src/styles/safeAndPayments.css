@@ -1,0 +1,365 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and Footer */
+
+.footer {
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* Ensure header/footer content is centered vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background: url('https://s.alicdn.com/@img/imgextra/i2/O1CN01jRIyKo21SiyaabZgZ_!!6000000006984-0-tps-3840-800.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+
+.trade-assurance-logo {
+    /* width: 70px; */
+    /* height: 70px; */
+}
+
+.trade-assurance-p {
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 900;
+    color: white;
+}
+
+.safe-easy {
+    font-size: 2.5rem;
+    /* 40px */
+    font-weight: 900;
+    color: white;
+    padding-top: 45px;
+}
+
+.Third-line-p {
+    font-size: 1.44rem;
+    /* ~23px */
+    font-weight: 700;
+    color: white;
+    padding-top: 30px;
+}
+
+/* Main Content */
+.main-first-line {
+    padding: 10px 5%;
+}
+
+.main-text {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-title-1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 15px 5% 10px;
+}
+
+.main-desc {
+    font-size: 1rem;
+    padding: 10px 5%;
+}
+
+/* Futures Section */
+.main-futures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.main-futures .f1,
+.main-futures .f2 {
+    width: 45%;
+    margin: 10px;
+    border: 2px solid rgb(172, 160, 172);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.cercle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(186, 186, 88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.first-icon,
+.second-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.main-title {
+    font-size: 1.56rem;
+    /* ~25px */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.main-text {
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+/* Notice */
+.noteice p {
+    width: 90%;
+    margin: 20px auto;
+    color: rgb(128, 128, 169);
+    font-size: 0.9rem;
+}
+
+/* Order and Pay Section */
+.order-and-pay {
+    padding: 15px 5%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Steps Section */
+.steps-container {
+    width: 90%;
+    margin: 0 auto;
+    border-left: 3px solid #ccc;
+    padding: 20px 0 20px 5%;
+}
+
+.step {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-title {
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 1rem;
+    /* 16px */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.step-content p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Step 3 Image */
+.step-3-image {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.step-3-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Terms & Conditions */
+.terms-conditions {
+    background-color: rgb(22, 19, 19);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.terms-conditions .item1,
+.terms-conditions .item2,
+.terms-conditions .item3,
+.terms-conditions .item4 {
+    width: 250px;
+    background-color: #242423;
+    border-radius: 16px;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens up to 1024px */
+@media screen and (max-width: 1024px) {
+    .hero {
+        height: 300px;
+    }
+
+    .safe-easy {
+        font-size: 2rem;
+        /* 30px */
+    }
+
+    .Third-line-p {
+        font-size: 1.125rem;
+        /* 18px */
+    }
+
+    .main-futures .f1,
+    .main-futures .f2 {
+        width: 90%;
+    }
+}
+
+/* For screens up to 768px */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 250px;
+        padding: 0 3%;
+    }
+
+    .safe-easy {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    .Third-line-p {
+        font-size: 1rem;
+        /* 16px */
+    }
+
+    .first-line {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title-1 {
+        font-size: 1.875rem;
+        /* 30px */
+    }
+
+    .steps-container {
+        width: 95%;
+        padding-left: 3%;
+    }
+
+    .terms-conditions {
+        flex-direction: column;
+    }
+}
+
+/* For screens up to 480px */
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 200px;
+        padding: 0 2%;
+    }
+
+    .safe-easy {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+
+    .Third-line-p {
+        font-size: 0.875rem;
+        /* 14px */
+    }
+
+    .main-title-1 {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    .steps-container {
+        padding-left: 2%;
+    }
+
+    .main-futures .f1,
+    .main-futures .f2 {
+        width: 100%;
+    }
+}
+
+/* For very small screens up to 360px */
+@media screen and (max-width: 360px) {
+    .hero {
+        height: 180px;
+    }
+
+    .trade-assurance-p {
+        font-size: 1rem;
+        /* 16px */
+    }
+
+    .safe-easy {
+        font-size: 1.125rem;
+        /* 18px */
+    }
+
+    .Third-line-p {
+        font-size: 0.75rem;
+        /* 12px */
+    }
+
+    .main-title-1 {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+
+    .order-and-pay {
+        font-size: 1rem;
+    }
+
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+}

@@ -152,7 +152,7 @@ header .header {
   width: 100%;
   height: fit-content;
   z-index: 999;
-  background: #ffffff;
+  background: #FAFDFF;
   box-shadow: var(--clg-effect-sem-shadow-elevation-3, 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026);
   position: fixed;
   left: 0;
@@ -242,160 +242,10 @@ header .dropsDown-container {
   z-index: 0;
 }
 
-header .dropsDown-container .account-dropDown {
-  width: 90%;
-  height: fit-content;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  background: #ffffff;
-  position: absolute;
-  top: -500px;
-  transition: 1s ease-in-out;
-}
-
-header .dropsDown-container .account-dropDown > div {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-}
-
-header .dropsDown-container .account-dropDown .close span {
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--blue-1);
-  position: absolute;
-  right: -1.55em;
-  top: -0em;
-  color: #ffffff;
-}
-
-header .dropsDown-container .account-dropDown .btns p {
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-header .dropsDown-container .account-dropDown .btns p.active {
-  border-bottom: 1.5px solid var(--blue-1);
-}
-
-header .dropsDown-container .account-dropDown form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 10px 20px 0;
-  gap: 0.5em;
-}
-
-.dropsDown-container .account-dropDown div form > div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.dropsDown-container
-  .account-dropDown
-  div
-  form
-  > div
-  input:not(input[type="checkbox"]) {
-  width: 100%;
-  border: none;
-  outline: none;
-}
-
-.dropsDown-container .account-dropDown div form .email input,
-.dropsDown-container .account-dropDown div form .password input,
-.dropsDown-container .account-dropDown div form .last-name input,
-.dropsDown-container .account-dropDown div form .first-name input {
-  padding: 8px;
-  border: 1px solid var(--midel-light_grey) !important;
-}
-
-.dropsDown-container .account-dropDown div form .email label,
-.dropsDown-container .account-dropDown div form .password label,
-.dropsDown-container .account-dropDown div form .last-name label,
-.dropsDown-container .account-dropDown div form .first-name label {
-  padding-bottom: 5px;
-}
-
-.dropsDown-container .account-dropDown .remember,
-.dropsDown-container .account-dropDown .sbumit {
-  flex-direction: row !important;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.dropsDown-container .account-dropDown .sbumit a {
-  font-size: 10px;
-  text-decoration: underline;
-}
-
-.dropsDown-container .account-dropDown .sbumit button {
-  width: fit-content;
-  padding: 5px 25px;
-  border: 1px solid var(--blue-1);
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s ease;
-}
-
-.dropsDown-container .account-dropDown .sbumit button span {
-  position: relative;
-}
-.dropsDown-container .account-dropDown .sbumit button span .icon {
-  position: absolute;
-  font-size: 15px;
-  bottom: -8px;
-  left: 5px;
-  transition: 0.5s ease;
-}
-
-.dropsDown-container .account-dropDown .sbumit button:hover {
-  background: var(--blue-1);
-  color: #ffffff;
-  transition: 0.5s ease-in-out;
-}
-
-.dropsDown-container .account-dropDown .sbumit button:hover span .icon {
-  transform: translateX(5px);
-  transition: 0.5s ease-in-out;
-}
 
 
-.dropsDown-container .account-dropDown .forms {
-  flex-direction: column;
-}
 
-.dropsDown-container .account-dropDown .forms > div {
-  transition: all 0.7s ease;
-  opacity: 0;
-  display: none;
-}
 
-.dropsDown-container .account-dropDown .forms > div.show {
-  opacity: 1;
-  display: flex;
-}
-
-header .dropsDown-container .account-dropDown.show {
-  top: 20%;
-  display: block;
-}
 
 header .dropsDown-container {
   overflow-x: hidden;
@@ -530,12 +380,12 @@ header .cart-dropDown.show {
   padding: 0;
   margin: 0;
   display: none;
-  background: #ffffff;
+  background: #FAFDFF;
   z-index: 899;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.34);
   position: fixed;
   left: 0;
-  top: 100.3px;
+  top: 99.5px;
 
 }
 
@@ -1387,10 +1237,7 @@ header .cart-dropDown.show {
     font-size: 2.3em;
   }
 
-  header .dropsDown-container .account-dropDown {
-    width: 80%;
-  }
-
+  
   .dropsDown-container .drop-menu {
     width: 65%;
   }
@@ -1437,9 +1284,7 @@ header .cart-dropDown.show {
     font-size: 13.5px;
   }
 
-  header .dropsDown-container .account-dropDown {
-    width: 70%;
-  }
+  
 
   header .cart-dropDown {
     width: 50%;
@@ -1554,6 +1399,7 @@ header .cart-dropDown.show {
     font-size: 15px;
     flex-direction: column;
     cursor: pointer;
+    padding-bottom: 10px;
   }
 
   .header .header-left .shipping > span{
@@ -1726,9 +1572,7 @@ header .cart-dropDown.show {
     color: var(--Coral-1);
   }
 
-  header .dropsDown-container .account-dropDown {
-    width: 60%;
-  }
+
 
   header .cart-dropDown {
     width: 40%;
@@ -1770,14 +1614,7 @@ header .cart-dropDown.show {
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {
-    .header{
 
-    }
-} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -1798,75 +1635,19 @@ header .cart-dropDown.show {
     width: 17% !important;
   }
 
-  .header .header-center form > button {
-    height: 45px;
-  }
 
-  header .dropsDown-container .account-dropDown {
-    width: 45%;
-    padding: 15px 20px;
-  }
 
-  header .dropsDown-container .account-dropDown .btns p {
-    width: 50%;
-    padding: 20px;
-    font-size: 19px;
-  }
-
-  header .dropsDown-container .account-dropDown .btns p.active {
-    border-bottom: 2.5px solid var(--blue-1);
-  }
-
-  header .dropsDown-container .account-dropDown .close span {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--blue-1);
-    position: absolute;
-    right: -1.55em;
-    top: -1.15em;
-    color: #ffffff;
-  }
-
-  header .dropsDown-container .account-dropDown .close span .icon {
-    font-size: 30px;
-  }
-
-  .dropsDown-container .account-dropDown .sbumit button {
-    width: fit-content;
-    padding: 8px 50px;
-    border: 1px solid var(--blue-1);
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s ease;
-    font-weight: 600;
-    font-size: 17px;
-  }
-
-  .dropsDown-container .account-dropDown .sbumit button span .icon {
-    font-size: 20px;
-    bottom: -10px;
-    left: 5px;
-    transition: 0.5s ease;
-  }
-
-  .dropsDown-container .account-dropDown div form .email input,
-  .dropsDown-container .account-dropDown div form .password input,
-  .dropsDown-container .account-dropDown div form .last-name input,
-  .dropsDown-container .account-dropDown div form .first-name input {
-    padding: 10px;
-    font-size: 17px;
-  }
+  
 
   .header .header-right a {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 10px;
+  }
+  .header .header-right .quickEnter a{
+    padding-bottom: 5px;
   }
 
   .header .header-right a > p {
@@ -1876,7 +1657,7 @@ header .cart-dropDown.show {
   }
 
   .header-bottom {
-    top: 104.3px;
+    top: 104px;
   }
 
   /* *** menu principale *** */

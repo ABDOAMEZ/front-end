@@ -1,0 +1,358 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and Footer */
+
+.footer {
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background-image: url('https://s.alicdn.com/@img/imgextra/i1/O1CN01RrtGbY1MnQdThpd0u_!!6000000001479-0-tps-3840-800.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 5%;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+
+.trade-assurance-logo {
+    /* width: 70px;
+    height: 70px; */
+}
+
+.trade-assurance-p {
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+}
+
+.second-line .safe-easy {
+    text-align: start;
+}
+
+.safe-easy {
+    padding-top: 45px;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.Third-line-p {
+    padding-top: 30px;
+    text-align: start;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+    width: 60%;
+}
+
+/* Main Content */
+.main-first-line {
+    padding: 10px 5%;
+    text-align: start;
+}
+
+.main-text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: start;
+}
+
+.main-title-1 {
+    padding: 15px 5% 10px;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+}
+
+.main-desc {
+    padding: 10px 5%;
+    font-weight: 400;
+}
+
+/* Futures Section */
+.main-futures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    
+}
+
+.main-futures .f1,
+.main-futures .f2,
+.main-futures .f3 {
+    width: 30%;
+    border: 2px solid rgb(172, 160, 172);
+    border-radius: 8px;
+    padding: 20px;
+   
+    
+}
+
+/* Circle Icon Container */
+.cercle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(186, 186, 88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.first-icon,
+.second-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.main-title {
+    font-size: 25px;
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+.main-text {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Notice */
+.noteice p {
+    padding: 0 5%;
+    width: 80%;
+    color: rgb(128, 128, 169);
+}
+
+/* Order and Pay Section */
+.order-and-pay {
+    padding: 15px 5%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Steps Section */
+.steps-container {
+    width: 80%;
+    border-left: 3px solid #ccc;
+    padding: 20px 0 20px 5%;
+    margin: 0 auto;
+}
+
+.step {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.step-content {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Step 3 Image */
+.step-3-image {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-3-image img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+/* Terms & Conditions */
+.terms-conditions {
+    background-color: rgb(22, 19, 19);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.terms-conditions .item1,
+.terms-conditions .item2,
+.terms-conditions .item3,
+.terms-conditions .item4 {
+    width: 250px;
+    background-color: #242423;
+    border-radius: 16px;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Up to 1024px */
+@media screen and (max-width: 1024px) {
+    .hero {
+        height: 300px;
+    }
+
+    .safe-easy {
+        font-size: 30px;
+    }
+
+    .Third-line-p {
+        font-size: 18px;
+    }
+
+    .main-futures .f1,
+    .main-futures .f2,
+    .main-futures .f3 {
+        width: 90%;
+    }
+}
+
+/* Up to 768px */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 250px;
+        padding: 0 3%;
+    }
+
+    .safe-easy {
+        font-size: 24px;
+    }
+
+    .Third-line-p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .first-line {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title-1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .steps-container {
+        width: 95%;
+        padding-left: 3%;
+    }
+
+    .terms-conditions {
+        flex-direction: column;
+    }
+}
+
+/* Up to 480px */
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 200px;
+        padding: 0 2%;
+    }
+
+    .safe-easy {
+        font-size: 20px;
+    }
+
+    .Third-line-p {
+        font-size: 14px;
+    }
+
+    .main-title-1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .step-3-image {
+        width: 100%;
+    }
+
+    .main-futures .f1,
+    .main-futures .f2,
+    .main-futures .f3 {
+        width: 100%;
+    }
+}
+
+/* For very small screens up to 360px */
+@media screen and (max-width: 360px) {
+    .hero {
+        height: 180px;
+    }
+
+    .trade-assurance-p {
+        font-size: 16px;
+    }
+
+    .safe-easy {
+        font-size: 18px;
+        padding-top: 35px;
+    }
+
+    .Third-line-p {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    .main-title-1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+}

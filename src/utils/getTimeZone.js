@@ -53,7 +53,7 @@ export const UserTimezone = () => {
         "Africa/Algiers": "Algeria",
         "Africa/Casablanca": "Morocco",
       });
-      console.log(countries[Intl.DateTimeFormat().resolvedOptions().timeZone])
+      // console.log(countries[Intl.DateTimeFormat().resolvedOptions().timeZone])
 
     return countries[Intl.DateTimeFormat().resolvedOptions().timeZone] ;
 

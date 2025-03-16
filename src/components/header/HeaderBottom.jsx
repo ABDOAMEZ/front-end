@@ -177,7 +177,7 @@ const HeaderBottom = () => {
 
             <div className="item last">
               <p>
-                <Link>
+                <Link to={'/become seller'}>
                 Become a Seller
                 </Link>
               </p>

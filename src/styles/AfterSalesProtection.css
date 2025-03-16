@@ -1,0 +1,329 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background-image: url('https://s.alicdn.com/@img/imgextra/i2/O1CN01fJft1c1NhIxG9CPQf_!!6000000001601-0-tps-3840-800.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Header and Footer */
+
+.footer {
+    text-align: center;
+    background-color: skyblue;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section 1 */
+.trade-assurance-logo {
+    /* width: 70px;
+    height: 70px; */
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 40px;
+    padding-left: 5%;
+}
+
+.trade-assurance-p {
+    color: white;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.safe-easy {
+    padding-top: 45px;
+    padding-left: 5%;
+    color: white;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.Third-line-p {
+    padding-left: 5%;
+    padding-top: 30px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    width: 60%;
+}
+
+/* Main Content */
+.main-first-line {
+    padding: 10px 0 0 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-text {
+    width: 80%;
+}
+
+.main-title-1 {
+    padding: 15px 0 10px 5%;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    text-align: left;
+}
+
+.main-desc {
+    padding: 10px 0 10px 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+/* Futures Section */
+.main-futures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.main-futures .f1,
+.main-futures .f2,
+.main-futures .f3 {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid rgb(172, 160, 172);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Circle Icon Container */
+.cercle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(186, 186, 88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.first-icon,
+.second-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.main-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.main-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.noteice p {
+    padding-left: 5%;
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(128, 128, 169);
+}
+
+.order-and-pay {
+    padding-left: 5%;
+    padding-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Steps */
+.steps-container {
+    width: 80%;
+    border-left: 3px solid #ccc;
+    padding-top: 20px;
+    padding-left: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sub-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.step-content {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Image Section */
+.step-3-image {
+    background-color: #eca2e2;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-3-image img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 16px;
+}
+
+/* Terms & Conditions */
+.terms-conditions {
+    background-color: rgb(22, 19, 19);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.terms-conditions .item1,
+.terms-conditions .item2,
+.terms-conditions .item3,
+.terms-conditions .item4 {
+    text-align: center;
+    width: 250px;
+    height: auto;
+    background-color: #242423;
+    border-radius: 16px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .hero {
+        height: 300px;
+    }
+
+    .safe-easy {
+        font-size: 30px;
+    }
+
+    .Third-line-p {
+        font-size: 18px;
+    }
+
+    .main-futures .f1,
+    .main-futures .f2,
+    .main-futures .f3 {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 250px;
+    }
+
+    .safe-easy {
+        font-size: 24px;
+    }
+
+    .Third-line-p {
+        font-size: 16px;
+    }
+
+    .first-line {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .main-title-1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .steps-container {
+        width: 90%;
+        padding-left: 20px;
+    }
+
+    .terms-conditions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 200px;
+    }
+
+    .safe-easy {
+        font-size: 20px;
+    }
+
+    .Third-line-p {
+        font-size: 14px;
+    }
+
+    .main-title-1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .step-3-image {
+        width: 100%;
+    }
+
+    .main-futures .f1,
+    .main-futures .f2,
+    .main-futures .f3 {
+        width: 100%;
+    }
+}

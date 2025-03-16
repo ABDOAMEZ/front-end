@@ -1,3 +1,5 @@
+import { useLoginMutation, useRegisterMutation } from "../../services/api/userApi";
+
 import { useState, useEffect } from "react";
 import { GET_data } from "../../services/data";
 
@@ -8,52 +10,24 @@ import { TbCameraSearch } from "react-icons/tb";
 import { AiOutlineInstagram, AiFillTikTok } from "react-icons/ai";
 import { LiaFacebookF, LiaTwitter } from "react-icons/lia";
 import { MdClose } from "react-icons/md";
-import { GoArrowRight } from "react-icons/go";
 import { CiTrash } from "react-icons/ci";
 
 import SearchContainer from "./SearchByCameraDrop";
 
 
 const DropsDown = () => {
+
+
+
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeSubcategory, setActiveSubcategory] = useState(null);
 
   const [data] = useState(GET_data);
 
-  const registerShown = () => {
-    let registerFrom = document.getElementById("register");
-    let loginFrom = document.getElementById("login");
-    let registerBtn = document.getElementById("registerBtn");
-    let loginBtn = document.getElementById("loginBtn");
 
-    registerBtn.classList.add("active");
-    loginBtn.classList.remove("active");
 
-    registerFrom.classList.add("show");
-    loginFrom.classList.remove("show");
-  };
 
-  const loginShown = () => {
-    let registerFrom = document.getElementById("register");
-    let loginFrom = document.getElementById("login");
-    let registerBtn = document.getElementById("registerBtn");
-    let loginBtn = document.getElementById("loginBtn");
 
-    loginBtn.classList.add("active");
-    registerBtn.classList.remove("active");
-
-    loginFrom.classList.add("show");
-    registerFrom.classList.remove("show");
-  };
-
-  const hideDrop = () => {
-    let drop = document.querySelector("#accountDrop");
-    let dropContainer = drop.parentElement;
-    drop.classList.remove("show");
-    setTimeout(() => {
-      dropContainer.classList.remove("show");
-    }, 50);
-  };
 
   const cartDropHide = () => {
     let cartDrop = document.querySelector("#cartDrop");
@@ -102,24 +76,23 @@ const DropsDown = () => {
 
 
 
-  const handleClickOutside = (event) => {
-    if (!event.target.closest(".menu-container")) {
-      setActiveCategory(null);
-      setActiveSubcategory(null);
-    }
-  };
+  // const handleClickOutside = (event) => {
+  //   if (!event.target.closest(".menu-container")) {
+  //     setActiveCategory(null);
+  //     setActiveSubcategory(null);
+  //   }
+  // };
 
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("click", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //   };
+  // }, []);
 
   const hideAll = (ele) => {
     
     if(ele.target.classList.value === "dropsDown-container show" ){
-      hideDrop();
       hideMenuDrop();
       cartDropHide();
       searchCamerDrop();
@@ -132,90 +105,13 @@ const DropsDown = () => {
     // console.log(document.querySelector('#search-container'))
   }
 
+  
+  
+  
+
   return (
     <div onClick={e => hideAll(e)} className="dropsDown-container">
-      <div id="accountDrop" className="account-dropDown">
-        <div className="close">
-          <span onClick={hideDrop}>
-            <MdClose className="icon" />
-          </span>
-        </div>
-
-        <div className="btns">
-          <p id="loginBtn" onClick={loginShown} className="active">
-            Login
-          </p>
-
-          <p id="registerBtn" onClick={registerShown}>
-            Register
-          </p>
-        </div>
-
-        <div className="forms">
-          <div id="login" className="login show">
-            <form action="">
-              <div className="email">
-                <label htmlFor="">Email *</label>
-                <input type="Email" />
-              </div>
-
-              <div className="password">
-                <label htmlFor="">Password *</label>
-                <input type="password" />
-              </div>
-
-              <div className="remember">
-                <input type="checkbox" />
-                <label htmlFor="">Remember Me</label>
-              </div>
-
-              <div className="sbumit">
-                <button type="submit">
-                  Login
-                  <span>
-                    <GoArrowRight className="icon" />
-                  </span>
-                </button>
-                <Link to="/forgot-password">Forgot Password?</Link>
-              </div>
-            </form>
-          </div>
-
-          <div id="register" className="register">
-            <form action="">
-              <div className="first-name">
-                <label htmlFor="">First Name *</label>
-                <input type="text" />
-              </div>
-
-              <div className="last-name">
-                <label htmlFor="">Last Name *</label>
-                <input type="text" />
-              </div>
-
-              <div className="email">
-                <label htmlFor="">Email *</label>
-                <input type="Email" />
-              </div>
-
-              <div className="password">
-                <label htmlFor="">Password *</label>
-                <input type="password" />
-              </div>
-
-              <div className="sbumit">
-                <button type="submit">
-                  Sing up
-                  <span>
-                    <GoArrowRight className="icon" />
-                  </span>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        
-      </div>
+      
 
       <div id="cartDrop" className="cart-dropDown">
         <div className="cart-dropDown_headre">
@@ -392,7 +288,7 @@ const DropsDown = () => {
                 <div className="becom-seller">
                   <div>
                     <h3>
-                      <Link to={"/becom seller"}>Become Seller</Link>
+                      <Link to={"/Simple_form"}>Become Seller</Link>
                     </h3>
                   </div>
                 </div>

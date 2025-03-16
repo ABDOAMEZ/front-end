@@ -124,6 +124,11 @@
     object-fit: cover;
 }
 
+.quickEnter a span{
+    display: none !important;
+}
+
+
 .actions #ul span{
     position: relative;
     background: transparent;
@@ -251,6 +256,7 @@
 @media only screen and (min-width: 1200px) {
     .SinfinUp .SinfinUpConatiner{
         left: -215%; 
+        top: -10px;
     }
 
     #para a{

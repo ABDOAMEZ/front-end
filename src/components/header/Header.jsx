@@ -7,12 +7,19 @@ import DropsDown from "./DropsDown";
 import TradeAssurance from "./TradeAssurance";
 import HelpDrop from "./HelpDrop";
 
+import { useLocation } from "react-router-dom";
+
 const Header = () => {
+
+  const location = useLocation();
+  const receivedData = location.state;
+  // console.log('haeder: ' + receivedData);
+
   return (
     <header>
       <HeaderTop />
 
-      <HeaderCenter />
+      <HeaderCenter userData={receivedData}/>
 
       <HeaderBottom />
 

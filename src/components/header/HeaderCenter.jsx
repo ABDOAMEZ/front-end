@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import "./sinfinUp.css";
+import { useState, useEffect } from "react";
+import "../../styles/sinfinUp.css";
 import countryList from "../../services/countries";
+
+
 
 import Select from "react-select";
 
@@ -18,10 +20,13 @@ import { VscAccount } from "react-icons/vsc";
 import { SlEnvolopeLetter } from "react-icons/sl";
 
 import SearchContainer from "./SearchByCameraDrop";
+import { useSelector } from "react-redux";
+import { useGetCategoriesQuery } from "../../services/api/categorieApi";
 
-const HeaderCenter = () => {
+const HeaderCenter = (props) => {
   const [categorie, setCategorie] = useState("all categories");
-  const [data] = useState(GET_data);
+  const [categories, setCategories] = useState([]);
+  // const [data] = useState(GET_data);
   const [selectedCountry, setSelectedCountry] = useState({
     label: UserTimezone(),
     value: countryList.find((e) => e.label === UserTimezone()).value,
@@ -29,11 +34,16 @@ const HeaderCenter = () => {
   });
   const [zipCode, setZipCode] = useState("");
 
+
+  const { data: get_data, isLoading, error } = useGetCategoriesQuery();
+  
+
+
   const handleChange = (selectedOption) => {
     setSelectedCountry(selectedOption);
   };
 
-  console.log(categorie);
+  // console.log(categorie);
 
   const cartDropShow = () => {
     let cartDrop = document.querySelector("#cartDrop");
@@ -75,7 +85,22 @@ const HeaderCenter = () => {
       .classList.add("down");
   };
 
+  const handelFetchCategories =  () => {
+    const response = get_data;
+    // console.log(response);
+    if (response) {
+      setCategories(response);
+    }
+  }
+  
+  useEffect(() => {
+    handelFetchCategories();
+  });
 
+  
+
+
+  
 
   return (
     <div className="header">
@@ -151,11 +176,18 @@ const HeaderCenter = () => {
             </span>
             <select onChange={(e) => setCategorie(e.target.value)}>
               <option value={""}>All Categories</option>
-              {data.map((c) => (
-                <option key={c.id} value={c.name}>
-                  {c.name}
-                </option>
-              ))}
+              {
+                categories.length > 0 ?(
+                  categories.map((c) => (
+                    <option key={c.id} value={c.name}>
+                      {c.name}
+                    </option>
+                  ))
+                ):
+                (
+                  <option value={""}>Loading...</option>
+                )
+              }
             </select>
             <button type="submit">
               <IoIosSearch className="icon" />
@@ -167,16 +199,25 @@ const HeaderCenter = () => {
 
         <div className="header-right">
           <div className="account">
-            <Link>
-              <AiOutlineUser className="icon" />
-              <p>Account</p>
-            </Link>
+            {
+              localStorage.getItem("USER_ACCESS_TOKEN")? (<Link to={`/profile`}>
+                <AiOutlineUser className="icon" />
+                <p>
+                    Account
+                  </p>
+              </Link>): (<Link to={`/login`}>
+                <AiOutlineUser className="icon" />
+                <p>
+                Account
+                  </p>
+              </Link>)
+            }
 
             <div className="SinfinUp">
               <div className="SinfinUpConatiner">
                 <div className="SinginUpBtns">
-                  <Link onClick={showDrop}>Login</Link>
-                  <Link onClick={showDrop}>Sign Up</Link>
+                  <Link to={'/login'}>Login</Link>
+                  <Link to={'/register'}>Sign Up</Link>
                 </div>
                 <span id="span"> or </span>
 
@@ -195,6 +236,7 @@ const HeaderCenter = () => {
                       src={require("../../assets/images/google.png")}
                       alt=""
                     />
+                    
                   </Link>
                   <Link>
                     <img

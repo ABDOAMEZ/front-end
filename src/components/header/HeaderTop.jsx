@@ -24,7 +24,7 @@ export default function HeaderTop() {
 
           <div className="links">
             {window.location.pathname !== "/store" ? (
-              <Link>About Us</Link>
+              <Link to={'/about us'}>About Us</Link>
             ) : (
               <Link>Store</Link>
             )}

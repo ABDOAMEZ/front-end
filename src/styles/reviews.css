@@ -1,0 +1,120 @@
+.testimonial-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* يسمح بلف المحتوى عند الحاجة */
+    max-width: 800px;
+    text-align: center;
+}
+
+/* تحسين الصورة وجعلها متجاوبة */
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-image:hover {
+    transform: scale(1.05);
+}
+
+/* تحسين النص */
+.testimonial-text {
+    text-align: left;
+    flex: 1;
+    min-width: 250px;
+}
+
+.testimonial-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.testimonial-position {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* أزرار التنقل */
+button.prev, button.next {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    color: gray;
+}
+
+/* تحسين التصميم للأجهزة اللوحية */
+@media (max-width: 768px) {
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-image {
+        margin: 0 auto 15px;
+        width: 90px;
+        height: 90px;
+    }
+    
+    .testimonial-text {
+        text-align: center;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+}
+
+/* تحسين التصميم للهواتف */
+@media (max-width: 480px) {
+    .testimonial-slider {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .testimonial-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial-name {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+
+    button.prev, button.next {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}

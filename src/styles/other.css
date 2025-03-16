@@ -1,0 +1,207 @@
+.about-section {
+  position: relative;
+  /* background: url('/public/Design sans titre1.png') center/cover no-repeat; */
+  background: #000;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns side by side */
+  gap: 20px;
+  max-width: 1200px; /* Increased max-width for better spacing */
+  margin: auto;
+}
+
+#icon1 {
+  font-size: 2.5rem; /* Icon size */
+  color: #007bff; /* Icon color (blue) */
+  margin-bottom: 20px; /* Space below the icon */
+}
+
+#icon2 {
+  font-size: 2.5rem; /* Icon size */
+  color: #fffb00; /* Icon color (yellow) */
+  margin-bottom: 20px; /* Space below the icon */
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, background 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.about-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.about-card p {
+  font-size: 1.1rem;
+}
+
+.about-card h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%; /* Full width within the card */
+  max-width: 600px; /* Maximum width for the video */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px; /* Space above the video */
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: opacity 0.5s ease; /* Smooth fade-out effect */
+}
+
+.hero-video.hidden {
+  opacity: 0; /* Hide the video */
+  pointer-events: none; /* Disable interaction with the hidden video */
+}
+
+.video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.video-button:hover {
+  opacity: 1;
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 1024px) {
+  .about-section h1 {
+      font-size: 2.2rem;
+  }
+
+  .about-grid {
+      gap: 15px;
+  }
+
+  .about-card {
+      padding: 15px;
+  }
+
+  .about-card h2 {
+      font-size: 1.5rem;
+  }
+
+  .about-card p {
+      font-size: 1rem;
+  }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .about-grid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .about-section h1 {
+      font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .about-card h2 {
+      font-size: 1.4rem; /* Smaller font size for mobile */
+  }
+
+  .about-card p {
+      font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .video-container {
+      width: 100%; /* Full width for mobile */
+  }
+}
+
+@media (max-width: 425px) {
+  .about-section h1 {
+      font-size: 1.8rem;
+  }
+
+  .about-card {
+      padding: 10px;
+  }
+
+  .about-card h2 {
+      font-size: 1.3rem;
+  }
+
+  .about-card p {
+      font-size: 0.9rem;
+  }
+
+  .video-button {
+      font-size: 1rem;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-section h1 {
+      font-size: 1.6rem;
+  }
+
+  .about-card h2 {
+      font-size: 1.2rem;
+  }
+
+  .about-card p {
+      font-size: 0.85rem;
+  }
+
+  .video-button {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-section h1 {
+      font-size: 1.5rem;
+  }
+
+  .about-card h2 {
+      font-size: 1.1rem;
+  }
+
+  .about-card p {
+      font-size: 0.8rem;
+  }
+
+  .video-button {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+  }
+}

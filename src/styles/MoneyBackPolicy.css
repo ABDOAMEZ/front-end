@@ -1,0 +1,301 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header & Footer */
+
+.footer {
+    text-align: center;
+    background-color: skyblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background-image: url('https://s.alicdn.com/@img/imgextra/i4/O1CN01PogENa20bb28NCZwL_!!6000000006868-0-tps-3840-800.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.trade-assurance-logo {
+    /* width: 70px;
+    height: 70px; */
+}
+
+.trade-assurance-p {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.second-line {
+    padding: 1rem;
+}
+
+.safe-easy {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    padding: 1rem;
+}
+
+.third-line {
+    margin-top: 15px;
+    /* padding: 1rem; */
+}
+
+.third-line-p {
+    color: white;
+    font-weight: 500;
+    font-size: 23px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+/* Main Content */
+.main-first-line {
+    padding: 1rem;
+    text-align: center;
+    text-align: start;
+}
+
+.main-text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-title-1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.main-desc {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Futures Section */
+.main-futures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.main-futures .f1,
+.main-futures .f2,
+.main-futures .f3 {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid rgb(172, 160, 172);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.cercle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(186, 186, 88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.first-icon,
+.second-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.main-title {
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+}
+
+.main-text {
+    font-size: 16px;
+}
+
+/* Notice */
+.noteice p {
+    padding: 1rem;
+    text-align: center;
+    color: rgb(128, 128, 169);
+}
+
+/* Order and Pay Section */
+.order-and-pay {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Steps Section */
+.steps-container {
+    width: 90%;
+    margin: 0 auto;
+    border-left: 3px solid #ccc;
+    padding: 1rem;
+}
+
+.step {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.step-number {
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+.step-title p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0.5rem 0;
+}
+
+.sub-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.step-content {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.step-3-image {
+    width: 95%;
+    margin: 1rem auto;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.step-3-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Terms & Conditions */
+.terms-conditions {
+    background-color: rgb(22, 19, 19);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.terms-conditions .item1,
+.terms-conditions .item2,
+.terms-conditions .item3,
+.terms-conditions .item4 {
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+    background-color: #242423;
+    border-radius: 16px;
+    color: white;
+    padding: 1rem;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+
+    .safe-easy {
+        font-size: 32px;
+    }
+
+    .third-line-p {
+        font-size: 18px;
+    }
+
+    .main-title-1 {
+        font-size: 32px;
+    }
+
+    .main-desc {
+        font-size: 14px;
+    }
+
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
+
+    .safe-easy {
+        font-size: 28px;
+    }
+
+    .third-line-p {
+        font-size: 16px;
+    }
+
+    .main-title-1 {
+        font-size: 28px;
+    }
+
+    .main-desc {
+        font-size: 12px;
+    }
+}
