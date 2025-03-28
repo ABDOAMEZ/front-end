@@ -15,6 +15,12 @@ import SllerForm from './components/BecomeSeller/Simple_form';
 import Rejister from './components/register/Rejister';
 import Login from './components/login/Login';
 import ProfilePage from './pages/ProfilePage';
+import AddProduct from './pages/AddProduct';
+import ListProduct from './pages/ListProduct';
+import AddCategory from './pages/AddCategory';
+import SubcategoryPage from './components/header/SubcategoryPage';
+import CategoryPage from './components/header/CategoryPage';
+
 
 
 function App() {
@@ -38,6 +44,11 @@ function App() {
         <Route path="/register" element={<Rejister />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/add Peoducts" element={<AddProduct />} />
+        <Route path="/products List" element={<ListProduct />} />
+        <Route path="/add category" element={<AddCategory />} />
+        <Route path="/category/:id" element={<SubcategoryPage />} />
+        <Route path="/subcategory/:id" element={<CategoryPage />} />
       </Routes>
         
     </BrowserRouter>

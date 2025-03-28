@@ -1,0 +1,73 @@
+.addProSec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #f8f8ffe4;
+}
+.productForm{
+    background: #f8f8ff;
+    border: 1px solid;
+    width: 550px;
+    margin-top: 150px;
+    padding: 20px;
+
+}
+
+.productForm >div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}  
+.productForm label{
+    font-size: 13px;
+    font-weight: 500;
+}  
+.productForm span{
+    font-size: 11.8px;
+    color: #8a8a8a;
+}
+
+.productForm select,
+.productForm textarea,
+.productForm input{
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--blue-1);
+}
+
+.productForm select{
+    appearance: none;
+    cursor: pointer;
+}  
+
+.productForm select option{
+    cursor: pointer;
+    background: transparent;
+} 
+
+.productForm select option:selected{
+    background: var(--blue-1);
+    color: #ffffff;
+}
+
+.productForm button{
+    width: fit-content;
+    padding: 8px 20px;
+    background: transparent;
+    color: var(--blue-1);
+    border: 1px solid var(--blue-1);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.productForm button:hover{
+    background: var(--blue-1);
+    color: #FFFFFF;
+}

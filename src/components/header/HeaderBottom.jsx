@@ -6,17 +6,24 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { GoGift } from "react-icons/go";
 
+
+import {useGetCategoriesQuery} from "../../services/api/categorieApi";
+ import { useGetProductsQuery } from "../../services/api/productsApi";
+
 const HeaderBottom = () => {
-  const [data] = useState(GET_data);
+  const [mainCate, setMaincate] = useState([]);
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeSubcategory, setActiveSubcategory] = useState(null);
+  const { data: getCategorys } = useGetCategoriesQuery();
+  
+  const { data: products, isLoading: isProductsLoading, isError: isProductsError } = useGetProductsQuery();
 
   const showBtn = () => {
     document.querySelector("#menu").classList.toggle("show");
     document.querySelector("#close").classList.toggle("show");
 
     if (document.querySelector("#menu").className.animVal === "icon") {
-      console.log(document.querySelector("#menu").className.animVal);
+      // console.log(document.querySelector("#menu").className.animVal);
       document.querySelector("#ctaegories").classList.add("show");
       document.querySelector("#categories-dropDown").classList.add("show");
     }
@@ -28,8 +35,10 @@ const HeaderBottom = () => {
 
   //! pricipal menu fnctions
   const handleCategoryClick = (category) => {
-    setActiveCategory(activeCategory === category ? null : category);
-    setActiveSubcategory(null);
+    // setActiveCategory(sousCate.filter(sc => sc.id === category));
+    // setActiveSubcategory(null);
+    setActiveCategory(category);
+    console.log(activeCategory)
   };
 
   const handleSubcategoryClick = (subcategory) => {
@@ -63,15 +72,35 @@ const HeaderBottom = () => {
     document.querySelector("#Principaletrade-help").classList.remove("down");
   };
 
-  const hideSubCMenu = (e) => {
-    e.style.display = 'none';
-  }
 
-  useEffect(() => {
+
+
+  const  handelclick = () => {
     document.addEventListener("click", handleClickOutside);
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
+  }
+
+
+
+
+
+const fetchCategorys = async () => {
+  const response = await getCategorys;
+  console.log(response);
+  setMaincate(
+    response
+  );
+} 
+
+
+
+  useEffect(() => {
+    handelclick();
+
+    fetchCategorys();
+
   }, [activeCategory||activeSubcategory]);
 
   return (
@@ -91,54 +120,74 @@ const HeaderBottom = () => {
               {/* Category Menu */}
               <ul className="category-menu">
                 <div>
-                {data.map((category) => (
-                  <li
-                    key={category.id}
-                    className="category-item"
-                    onClick={() => handleCategoryClick(category)}
-                  >
-                    {category.name}
-                  </li>
-                ))}
+                {mainCate &&
+                    mainCate.map(
+                      (category) =>
+                        category.parent_id === null && (
+                          <li
+                            key={category.id}
+                            className="category-item"
+                            // onMouseEnter={() => handleCategoryHover(category)}
+                            onClick={() => handleCategoryClick(category)}
+                          >
+                            {category.name}
+                          </li>
+                        )
+                    )}
                 </div>
 
 
                 
               </ul>
 
-              {/* Subcategories Menu */}
-              {activeCategory && (
-                <ul onMouseLeave={e => hideSubCMenu(e.target)} className="subcategory-menu">
-                  {activeCategory.subcategories.map((subcategory) => (
-                    <li
-                      key={subcategory.id}
-                      className="subcategory-item"
-                      onMouseEnter={() => handleSubcategoryClick(subcategory)}
-                    >
-                      <Link to={`/${subcategory.name}`}>
-                        {subcategory.name}
-                      </Link>
+              {activeCategory && mainCate && (
+                <ul
+                  onMouseLeave={() => setActiveCategory(null)}
+                  className="subcategory-menu"
+                >
+                  {mainCate
+                    .filter(
+                      (subcategory) =>
+                        subcategory.parent_id === activeCategory.id
+                    )
+                    .map((subcategory) => {
+                      const subcategoryProducts = products.filter(
+                        (product) => product.category_id === subcategory.id
+                      );
 
-                      <div className="prducts">
-                        {
-                          subcategory.products.map(p => (
-                            <Link to={p.name}>
-                              <img
-                          loading="lazy"
-                          src={p.image}
-                          // alt={p.name}
-                          className="product-image"
-                        />
-                        <span>
-                          {p.name}
-                        </span>
-                            </Link>
-
-                          ))
-                        }
-                      </div>
-                    </li>
-                  ))}
+                      return (
+                        <li
+                          key={subcategory.id}
+                          className="subcategory-item"
+                          onClick={() => handleSubcategoryClick(subcategory)}
+                        >
+                          <Link to={`/subcategory/${subcategory.id}`}>
+                            {subcategory.name}
+                          </Link>
+                          {/* Display products under the subcategory */}
+                          <div className="prducts">
+                            {subcategoryProducts.map((product) => (
+                              <li
+                                key={product.id}
+                                className="product-item"
+                              >
+                                <Link to={`/product/${product.id}`}>
+                                <img
+                                  loading="lazy"
+                                  src={product.image}
+                                  // alt={p.name}
+                                  className="product-image"
+                                />
+                                <span>
+                                {product.name}
+                                </span>
+                                </Link>
+                              </li>
+                            ))}
+                          </div>
+                        </li>
+                      );
+                    })}
                 </ul>
               )}
 

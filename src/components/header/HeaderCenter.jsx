@@ -20,12 +20,13 @@ import { VscAccount } from "react-icons/vsc";
 import { SlEnvolopeLetter } from "react-icons/sl";
 
 import SearchContainer from "./SearchByCameraDrop";
-import { useSelector } from "react-redux";
-import { useGetCategoriesQuery } from "../../services/api/categorieApi";
+import { useGetMainCategoriesQuery, useGetSousCategoriesQuery } from "../../services/api/categorieApi";
+import { useGetProductsQuery } from "../../services/api/productsApi";
 
 const HeaderCenter = (props) => {
   const [categorie, setCategorie] = useState("all categories");
   const [categories, setCategories] = useState([]);
+  const [souCategories, setSousCategories] = useState([]);
   // const [data] = useState(GET_data);
   const [selectedCountry, setSelectedCountry] = useState({
     label: UserTimezone(),
@@ -35,7 +36,9 @@ const HeaderCenter = (props) => {
   const [zipCode, setZipCode] = useState("");
 
 
-  const { data: get_data, isLoading, error } = useGetCategoriesQuery();
+  const { data: get_data, isLoading, error } = useGetMainCategoriesQuery();
+  const { data: get_dataSous } = useGetSousCategoriesQuery();
+  const { data: getProductData} = useGetProductsQuery();
   
 
 
@@ -92,9 +95,28 @@ const HeaderCenter = (props) => {
       setCategories(response);
     }
   }
+
+  const handelFetchSousCategories =  () => {
+    const response = get_dataSous;
+    // console.log(response);
+    if (response) {
+      setSousCategories(response);
+    }
+  }
+
+
+  const handelFetchProductsData =  () => {
+    const response = getProductData;
+    // console.log(response);
+    if (response) {
+      setSousCategories(response);
+    }
+  }
   
   useEffect(() => {
     handelFetchCategories();
+    handelFetchSousCategories();
+    handelFetchProductsData();
   });
 
   
